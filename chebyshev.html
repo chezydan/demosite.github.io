@@ -4,7 +4,7 @@
 
 
 	<head>
-<title > Markov's Inequality</title>
+<title > Chevyshev's Inequality</title>
 
 <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +15,12 @@
 <script src="master.js" charset="UTF-8"> </script>
 
 <link rel ="stylesheet" type="text/css" href="master.css">
+<script>
+function compute(){
+	alert("text")
+}
 
-
+</script>
 
 	</head>
 
@@ -24,13 +28,37 @@
 
 
 <h1> Chebyshev's Inequality</h1>
+<p> 
+	Probability that any X is &alpha; times further from &mu;  than &sigma; is &le; 
+	<sup>1</sup> &frasl; <sub> &alpha; <sup>2</sup></sub>
+	no not negativity</p>
  <h2> Formulation</h2>
 
  &forall;&alpha; &ge; 1  P(|X-&mu;| &ge; &alpha;&sigma;) &le;   1/ &alpha; <sup>2</sup>
 
+<br>
+<h4> or (formulation 2) </h4> Easer to prove, use
+ <p>a = &alpha; &sigma; </p>
+
+<p>  &forall;a &ge; &sigma;   P(|X-&mu;| &ge; a)  &le; <sup>&sigma;
+	<sup>2</sup> </sup> &frasl; <sub>a <sup>2</sup></sub> </p>
+
+
+ <h2> Example : Survey Responses</h2>
+
+ survey expected to result  &mu;= 1M responses with  &sigma; = 50K
+Bound  P(0.8M   < #responses  < 1.2M )
+
+P ( &mu; - 4 &sigma; < X &le; &mu;  + 4 &sigma;)   =  P(|X - &mu;| < 4&sigma;)
+&ge; 1 - <sup>1</sup> &frasl; <sub>16  </sub>
+
+
+<h2> trying Chebyshev</h2>
+<a href="chebyTest.html"> practicing </a>
 
 
 	</body>
 
-</div>
+
+
 </html>

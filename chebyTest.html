@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function compute(){
+        var a=0
+        var mu= document.getElementById("mu").value
+        var sigma= document.getElementById("sigma").value
+        var delta = document.getElementById("upperBound").value - mu
+        var lowerBound =  mu - delta
+        var alpha = delta / sigma
+        var solve= 1 / (Math.pow(alpha ,2))
+        document.getElementById("a").innerHTML=33333333
+        document.getElementById("lowerBound").innerHTML  += lowerBound
+        document.getElementById("alpha").innerHTML  = alpha
+        document.getElementById("alphaSqToNeg1").innerHTML  = solve
+    
+    }
+
+</script>
+
+</head>
+
+
+
+<body>
+
+    <h2> trying Chebyshev</h2>
+    <a href="chebyTest.html" > practicing </a>
+
+    &mu;= <input type ="text" id= "mu" > <br>
+    Upper Bound <input type = "text" id="upperBound" >  <text  id="lowerBound" >lower bound </text> <br>
+    &sigma;= <input type ="text" id= "sigma" > <br>
+  
+    a = <text id="a"> </text> <br>
+    &alpha; = <text id="alpha" > </text>
+    <br>
+    1/ &alpha; <sup>2</sup> = <text id="alphaSqToNeg1"> </text>
+    <br>
+    <button type="button" onclick="compute()"> calc</button>
+  
+
+
+
+</body>
+</html>
+
+
+
